@@ -4,5 +4,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin/shell/', include('admin_shell.urls')),
+    path('api/auth/', include('apps.authentication.urls')),
+    path('api/shops/', include('apps.shops.urls')),
+    # path('api/inventory/', include('apps.inventory.urls')),
+    # path('api/transactions/', include('apps.transactions.urls')),
 ]
